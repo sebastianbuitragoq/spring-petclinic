@@ -14,7 +14,7 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                bat 'docker build -t sebastianbuitragoq/spring-petclinic:latest .'
+                bat 'docker build -t sebastianbuitrago/spring-petclinic:latest .'
             }
         }
 
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'dockerHub', passwordVariable: 'DOCKER_PASS', usernameVariable: 'DOCKER_USER')]) {
                     bat 'echo %DOCKER_PASS% | docker login -u %DOCKER_USER% --password-stdin'
-                    bat 'docker push sebastianbuitragoq/spring-petclinic:latest'
+                    bat 'docker push sebastianbuitrago/spring-petclinic:latest'
                 }
             }
         }
