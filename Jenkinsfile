@@ -14,7 +14,7 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                bat 'docker build -t sebastianbuitragoq/spring-petclinic:latest .'
+                bat 'docker build -t sebastianbuitrago/spring-petclinic:latest .'
             }
         }
 
