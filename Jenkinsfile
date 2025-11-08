@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        IMAGE_NAME = 'sebastianbuitragoq/spring-petclinic:latest'
+        IMAGE_NAME = 'sebastianbuitrago/spring-petclinic:latest'
     }
 
     stages {
